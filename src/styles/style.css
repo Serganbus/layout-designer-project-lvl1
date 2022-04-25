@@ -43,8 +43,20 @@
   background-color: var(--semi-white);
 }
 
+.c-brown {
+  color: var(--brown);
+}
+
 .c-main {
   color: var(--main);
+}
+
+.c-semi-dark {
+  color: var(--semi-dark);
+}
+
+.c-custom {
+  color: #D7CCC0;
 }
 
 .c-white {
@@ -229,7 +241,6 @@ section:nth-child(2) .digit {
 .cognitive-iskazheniya {
   margin: 0;
   font: 24px/1em 'Neucha', sans-serif;
-  color: #908D8B;
 }
 
 .cognitive-iskazheniya-sub-header {
