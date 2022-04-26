@@ -43,6 +43,10 @@
   background-color: var(--semi-white);
 }
 
+.c-blue {
+  color: var(--blue);
+}
+
 .c-brown {
   color: var(--brown);
 }
@@ -71,16 +75,32 @@
   margin: 24px !important;
 }
 
-.ml-30 {
-  margin-left: 30px !important;
-}
-
 .ml-15 {
   margin-left: 15px !important;
 }
 
+.ml-30 {
+  margin-left: 30px !important;
+}
+
+.ml-55 {
+  margin-left: 55px !important;
+}
+
 .mr-15 {
   margin-right: 15px !important;
+}
+
+.mr-55 {
+  margin-right: 55px !important;
+}
+
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+
+.mt-15 {
+  margin-top: 15px !important;
 }
 
 .mt-30 {
@@ -89,6 +109,10 @@
 
 .mt-40 {
   margin-top: 40px !important;
+}
+
+.mt-60 {
+  margin-top: 60px !important;
 }
 
 .mt-100 {
@@ -268,4 +292,67 @@ section:nth-child(2) .digit {
 .kak-proyavlyaetsya {
   font-size: 14px;
   font-family: 'Open Sans';
+}
+
+footer .send-form {
+  position: relative;
+
+  padding-bottom: 59px;
+}
+
+footer .send-form label {
+  display: block;
+  font-size: 18px;
+}
+
+footer .send-form input {
+  position: absolute;
+  left: 0px;
+  right: 70px;
+
+  margin-top: 9px;
+  height: 20px;
+  padding: 15px;
+
+  border: none;
+}
+
+footer .send-form button {
+  position: absolute;
+  right: 0px;
+
+  margin-top: 9px;
+  padding: 0;
+  height: 50px;
+  width: 70px;
+
+  background-color: #fe8a02;
+
+  border: none;
+}
+
+footer .send-form button::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 20px;
+  width: 20px;
+  background-image: url('./../images/send.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer .row {
+  height: 190px;
+
+  align-content: center;
+}
+
+footer .row p {
+  margin: 0px;
+  font-size: 12px;
 }
