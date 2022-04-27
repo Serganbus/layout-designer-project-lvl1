@@ -222,6 +222,16 @@ main {
   content: "";
 }
 
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.row > .col {
+  flex: 1;
+}
+
 footer .send-form {
   position: relative;
 
@@ -280,6 +290,18 @@ footer .send-form button::before {
   content: "";
 }
 
+footer .row {
+
+  align-content: center;
+  height: 190px;
+}
+
+footer .row p {
+  margin: 0;
+
+  font-size: 12px;
+}
+
 header {
   position: relative;
 
@@ -296,16 +318,6 @@ header img {
   right: -270px;
 
   height: 525px;
-}
-
-.row {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-}
-
-.row > .col {
-  flex: 1;
 }
 
 section:nth-child(1) p {
