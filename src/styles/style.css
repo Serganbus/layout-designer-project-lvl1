@@ -119,6 +119,10 @@
   margin-top: 100px !important;
 }
 
+.mt-190 {
+  margin-top: 190px !important;
+}
+
 .mt-200 {
   margin-top: 200px !important;
 }
@@ -268,7 +272,7 @@ section:nth-child(2) .row {
 }
 
 section:nth-child(2) .col {
-  margin: 15px 0px;
+  margin: 10px 0px;
 
   width: 350px;
 
