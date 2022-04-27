@@ -238,7 +238,25 @@ section:nth-child(1) p {
 }
 
 section:nth-child(1) div.p-relative {
-  height: 500px;
+  height: 480px;
+}
+
+section:nth-child(2) a {
+  display: block;
+
+  color: black;
+  text-decoration: none;
+}
+
+section:nth-child(2) a:hover,
+section:nth-child(2) a:focus {
+  background-color: var(--main);
+  cursor: pointer;
+}
+
+section:nth-child(2) a:hover h3,
+section:nth-child(2) a:focus h3 {
+  color: var(--white);
 }
 
 section:nth-child(2) h2 {
@@ -326,7 +344,7 @@ footer .send-form button {
   height: 50px;
   width: 70px;
 
-  background-color: #fe8a02;
+  background-color: var(--main);
 
   border: none;
 }
