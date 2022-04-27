@@ -263,15 +263,25 @@ section:nth-child(2) h2 {
   font-size: 52px;
 }
 
-section:nth-child(2) .row:nth-child(1) .col {
-  margin: 10px 15px;
+section:nth-child(2) .row {
+  justify-content: space-between;
+}
+
+section:nth-child(2) .col {
+  margin: 15px 0px;
+
   width: 350px;
+
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+section:nth-child(2) .row:nth-child(1) .col {
   height: 323px;
 }
 
 section:nth-child(2) .row:nth-child(2) .col {
-  margin: 10px 15px;
-  width: 350px;
   height: 348px;
 }
 
