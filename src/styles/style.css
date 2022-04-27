@@ -11,24 +11,24 @@
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.ttf") format("truetype"); 
-  font-style: normal; 
   font-weight: 100 1000;
-}
-
-@font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Italic.ttf") format("truetype"); 
-  font-style: italic;
-  font-weight: 100 1000;
-}
-
-@font-face {
-  font-family: "Neucha";
-  src: url("../fonts/Neucha-Regular.ttf") format("truetype"); 
   font-style: normal;
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
   font-weight: 100 1000;
+  font-family: "Open Sans";
+  font-style: italic;
+  src: url("../fonts/OpenSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: 100 1000;
+  font-family: Neucha;
+  font-style: normal;
+  src: url("../fonts/Neucha-Regular.ttf") format("truetype");
 }
 
 .bg-brown {
@@ -60,7 +60,7 @@
 }
 
 .c-custom {
-  color: #D7CCC0;
+  color: #d7ccc0;
 }
 
 .c-white {
@@ -146,24 +146,33 @@
 .btn {
   display: inline-block;
   padding: 11px 24px;
+
   color: var(--white);
   font-weight: bold;
+  text-decoration: none;
+
   background-color: var(--main);
   cursor: pointer;
-  text-decoration: none;
 }
 
 body {
-  margin: 0px;
-  font: 16px/1.6em 'Open Sans', sans-serif;
+  margin: 0;
+
   color: var(--dark);
+  font: 16px/1.6em "Open Sans", sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Neucha';
-  line-height: 1.2em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
+
+  font-family: Neucha, sans-serif;
+  line-height: 1.2em;
 }
 
 h1 {
@@ -180,13 +189,14 @@ h3 {
 
 main {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 
 .container {
-  margin: 0px auto;
   max-width: 1110px;
+  margin: 0 auto;
+
   text-align: center;
 }
 
@@ -195,22 +205,84 @@ main {
 }
 
 .background::before {
-  content: '';
-  width: 100%;
-  height: 100%;
   position: absolute;
-  display: block;
 
   top: 0;
   left: 0;
-  background-image: url('../images/background.png');
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1;
+
+  content: "";
+}
+
+footer .send-form {
+  position: relative;
+
+  padding-bottom: 59px;
+}
+
+footer .send-form label {
+  display: block;
+
+  font-size: 18px;
+}
+
+footer .send-form input {
+  position: absolute;
+  right: 70px;
+  left: 0;
+
+  height: 20px;
+
+  margin-top: 9px;
+  padding: 15px;
+
+  border: none;
+}
+
+footer .send-form button {
+  position: absolute;
+  right: 0;
+
+  width: 70px;
+  height: 50px;
+
+  margin-top: 9px;
+  padding: 0;
+
+  background-color: var(--main);
+
+  border: none;
+}
+
+footer .send-form button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 20px;
+
+  height: 20px;
+
+  background-image: url("./../images/send.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate(-50%, -50%);
+
+  content: "";
 }
 
 header {
   position: relative;
+
   overflow: hidden;
 }
 
@@ -220,25 +292,24 @@ header .container {
 
 header img {
   position: absolute;
-  height: 525px;
   top: -45px;
   right: -270px;
+
+  height: 525px;
 }
 
 .row {
   display: flex;
-  flex-direction: row;
-	flex-wrap: wrap;
-	width: 100%;
+  flex-flow: row wrap;
+  width: 100%;
 }
 
 .row > .col {
-	flex: 1;
-  flex-wrap: nowrap;
+  flex: 1;
 }
 
 section:nth-child(1) p {
-  margin: 30px 0px;
+  margin: 30px 0;
 }
 
 section:nth-child(1) div.p-relative {
@@ -272,13 +343,9 @@ section:nth-child(2) .row {
 }
 
 section:nth-child(2) .col {
-  margin: 10px 0px;
-
+  flex: 0 1 auto;
   width: 350px;
-
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
+  margin: 10px 0;
 }
 
 section:nth-child(2) .row:nth-child(1) .col {
@@ -290,25 +357,28 @@ section:nth-child(2) .row:nth-child(2) .col {
 }
 
 section:nth-child(2) .digit {
-  font: 64px/1em 'Neucha', sans-serif;
   margin-bottom: 40px;
+
+  font: 64px/1em Neucha, sans-serif;
 }
 
 .cognitive-iskazheniya {
   margin: 0;
-  font: 24px/1em 'Neucha', sans-serif;
+
+  font: 24px/1em Neucha, sans-serif;
 }
 
 .cognitive-iskazheniya-sub-header {
-  font-family: 'Neucha';
-  line-height: 1.2em;
   margin: 0;
   padding: 0;
+
   font-size: 34px;
+  font-family: Neucha, sans-serif;
+  line-height: 1.2em;
 }
 
 .p-with-padding {
-  margin: 0px;
+  margin: 0;
   padding: 5px 10px;
 }
 
@@ -318,73 +388,11 @@ section:nth-child(2) .digit {
 
 .with-shadow {
   display: absolute;
-  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+
+  filter: drop-shadow(0 16px 32px rgb(0 0 0 / 15%));
 }
 
 .kak-proyavlyaetsya {
   font-size: 14px;
-  font-family: 'Open Sans';
-}
-
-footer .send-form {
-  position: relative;
-
-  padding-bottom: 59px;
-}
-
-footer .send-form label {
-  display: block;
-  font-size: 18px;
-}
-
-footer .send-form input {
-  position: absolute;
-  left: 0px;
-  right: 70px;
-
-  margin-top: 9px;
-  height: 20px;
-  padding: 15px;
-
-  border: none;
-}
-
-footer .send-form button {
-  position: absolute;
-  right: 0px;
-
-  margin-top: 9px;
-  padding: 0;
-  height: 50px;
-  width: 70px;
-
-  background-color: var(--main);
-
-  border: none;
-}
-
-footer .send-form button::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  height: 20px;
-  width: 20px;
-  background-image: url('./../images/send.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-footer .row {
-  height: 190px;
-
-  align-content: center;
-}
-
-footer .row p {
-  margin: 0px;
-  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
 }
